@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!--Koneksikan dengan CSS-->
+  <link rel="stylesheet" href="style7.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <i class="fas fa-graduation-cap fa-lg"></i>
+      <div class="logo-text">Pengumuman <br> Akademik Online</div>
+    </div>
+
+    <div class="nav">
+      <a href="beranda.html" class="nav-item active">
+        <i class="fas fa-home"></i> Dashboard
+      </a>
+      <a href="jadwal_ujian.html" class="nav-item">
+        <i class="fas fa-calendar-alt"></i> Jadwal Ujian
+      </a>
+      <a href="perkuliahan.html" class="nav-item">
+        <i class="fas fa-book-open"></i> Perkuliahan
+      </a>
+      <a href="perubahan_kelas.html" class="nav-item">
+        <i class="fas fa-exchange-alt"></i> Perubahan Kelas
+      </a>
+      <a href="beasiswa.html" class="nav-item">
+        <i class="fas fa-award"></i> Beasiswa
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="search-container">
+      <span style="font-size:22px;cursor:pointer;">☰</span>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="header-icons">
+      <i class="fa-regular fa-bell" title="Notifikasi" onclick="window.location.href='notifikasi.html'"></i>
+      <i class="fa-regular fa-user" title="Profil" onclick="window.location.href='profil_Mahasiswa.html'"></i>
+    </div>
+  </div>
+
+  <!-- Konten -->
+  <div class="content">
+    <h1>Profil Mahasiswa</h1>
+    <div class="profile-card">
+      <div class="profile-photo">
+        <img id="fotoProfil" src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Foto Profil">
+        <input type="file" id="uploadFoto" style="display:none" accept="image/*">
+        <button onclick="document.getElementById('uploadFoto').click()">Ganti Foto</button>
+      </div>
+
+      <div class="profile-info">
+        <h2>Data Pribadi</h2>
+        <table>
+          <tr>
+            <td><b>Nama Lengkap</b></td>
+            <td>:</td>
+            <td><span id="nama"></span></td>
+          </tr>
+          <tr>
+            <td><b>NIM</b></td>
+            <td>:</td>
+            <td><span id="nim"></span></td>
+          </tr>
+          <tr>
+            <td><b>Jurusan</b></td>
+            <td>:</td>
+            <td><span id="jurusan"></span></td>
+          </tr>
+          <tr>
+            <td><b>Program Studi</b></td>
+            <td>:</td>
+            <td><span id="prodi"></span></td>
+          </tr>
+          <tr>
+            <td><b>Email</b></td>
+            <td>:</td>
+            <td><span id="email"></span></td>
+          </tr>
+          <tr>
+            <td><b>No HP</b></td>
+            <td>:</td>
+            <td><span id="nohp"></span></td>
+          </tr>
+        </table>
+        <button class="edit-btn" onclick="editProfil()">Edit Profil</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINK ke JavaScript -->
+  <script src="script1.js"></script>
+
+</body>
+
+</html>
